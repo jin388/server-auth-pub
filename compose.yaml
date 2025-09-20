@@ -78,7 +78,8 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4:latest
-    restart: unless-stopped
+    # restart: unless-stopped
+    restart: always
     env_file: "./secrets/pgadmin/.pgadmin.env"
     ports:
       - "8081:80"
